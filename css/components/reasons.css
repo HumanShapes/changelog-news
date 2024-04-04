@@ -1,0 +1,33 @@
+.reasons {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    background: var(--color-black);
+    display: none;
+    overflow: scroll;
+    padding: var(--spacing-fluid);
+    z-index: 99;
+
+    &.is-visible {
+        display: block;
+    }
+
+    .reasons-list {
+        list-style: decimal-leading-zero;
+        list-style-position: inside;
+
+        li {
+            border-bottom: 1px solid var(--color-green);
+            font-family: var(--font-mono);
+            font-size: 14px;
+            padding: 1rem;
+        }
+    }
+
+    .button {
+        width: 100%;
+    }
+}
