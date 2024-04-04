@@ -92,7 +92,7 @@ a {
 .subscribe_icons {
     display: flex;
     flex-wrap: wrap;
-    gap: 1.5rem;
+    gap: 1rem;
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -108,6 +108,12 @@ a {
             height: 1.5rem;
             padding: 0 0 0 2.25rem;
             border-bottom: 0;
+
+            span {
+                @media (max-width: 480px) {
+                    display: none;
+                }
+            }
         }
     }
 }

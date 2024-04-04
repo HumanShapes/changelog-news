@@ -14,10 +14,5 @@
     "lightningcss": "^1.24.1",
     "lightningcss-cli": "^1.24.1",
     "parcel": "^2.12.0"
-  },
-  "@parcel/transformer-css": {
-    "drafts": {
-      "nesting": true
-    }
   }
 }
