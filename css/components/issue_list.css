@@ -1,0 +1,77 @@
+.issue_list {
+    container-type: inline-size;
+}
+
+.issue_list-item {
+    align-items: center;
+    background: var(--color-white);
+    border-bottom: var(--base-border);
+    display: flex;
+    gap: 1rem;
+    padding: 2rem;
+    position: relative;
+
+    & > div {
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    a {
+        padding: 0;
+        border: 0;
+    }
+
+    /* Audio Elements */
+    .play_button {
+        background: url('/img/icon-play.svg') center no-repeat;
+        background-size: 16px 20px;
+        border: var(--base-border);
+        border-radius: 50%;
+        height: 3em;
+        width: 3em;
+    }
+    &.is-playing .play_button {
+        background-image: url('/img/icon-pause.svg');
+    }
+
+    .progress_bar {
+        background: #EEE;
+        display: none;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 4px;
+
+        &:before {
+            background: var(--color-green);
+            content: "";
+            display: block;
+            width: var(--progress);
+            height: 100%;
+        }
+    }
+    &.is-playing .progress_bar {
+        display: block;
+    }
+}
+.issue_list-item--sticky {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+.issue_list-pagination {
+    border-top: var(--base-border);
+
+    @container (width > 640px) {
+        display: grid;
+        grid-template-columns: fit-content(100%) 1fr;
+
+        .issue_list-item--view_all {
+            border-right: var(--base-border);
+        }
+    }
+}

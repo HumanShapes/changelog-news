@@ -1,0 +1,71 @@
+/* Display */
+.display-sm {
+    font-family: var(--font-display);
+    font-size: 1rem;
+    font-weight: 800;
+}
+.display-md {
+    font-family: var(--font-display);
+    font-size: 1.25rem;
+    font-weight: 800;
+}
+.display-lg {
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    font-weight: 800;
+}
+.display-xl {
+    font-family: var(--font-display);
+    font-size: 2rem;
+    font-weight: 800;
+}
+.display-2xl {
+    font-family: var(--font-display);
+    font-size: 2.5rem;
+    font-weight: 800;
+}
+.display-3xl {
+    font-family: var(--font-display);
+    font-size: 3rem;
+    font-weight: 800;
+}
+
+/* Sans */
+.sans-sm {
+    font-family: var(--font-sans);
+    font-size: 1rem;
+}
+.sans-md {
+    font-family: var(--font-sans);
+    font-size: 1.25rem;
+    font-weight: 400;
+}
+.sans-lg {
+    font-family: var(--font-sans);
+    font-size: 1.5rem;
+}
+
+/* Mono */
+.mono-sm {
+    font-family: var(--font-mono);
+    font-size: 0.875rem;
+}
+.mono-md {
+    font-family: var(--font-mono);
+    font-size: 1rem;
+    font-weight: 400;
+}
+.mono-lg {
+    font-family: var(--font-mono);
+    font-size: 1.25rem;
+}
+
+
+/* Misc. */
+.italic {
+    font-style: italic;
+}
+
+.color-grey {
+    color: var(--color-grey);
+}

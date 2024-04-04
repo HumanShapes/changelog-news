@@ -1,0 +1,78 @@
+
+@font-face{
+    font-display:fallback;
+    font-family:Roboto Mono;
+    font-style:normal;
+    font-weight:400;
+    src:url(https://cdn.changelog.com/static/fonts/roboto-mono-400-fa5553f8f65e0faaf7ab50f94b02ac91.woff2) format("woff2")
+}
+@font-face{
+    font-display:fallback;
+    font-family:Roboto Mono;
+    font-style:italic;
+    font-weight:400;
+    src:url(https://cdn.changelog.com/static/fonts/roboto-mono-400-italic-ef332ba303cef5e2438306ec1a07820a.woff2) format("woff2")
+}
+@font-face{
+    font-display:fallback;
+    font-family:Roboto Mono;
+    font-style:normal;
+    font-weight:700;
+    src:url(https://cdn.changelog.com/static/fonts/roboto-mono-700-2542e1bd22edaec8e20f29776a1c720f.woff2) format("woff2")
+}
+@font-face{
+    font-display:fallback;
+    font-family:Sana Sans;
+    font-style:normal;
+    font-weight:400;
+    src:url(https://cdn.changelog.com/static/fonts/SanaSansAlt-Regular-20b2407239fa9e68cba29292cf190c22.woff2) format("woff2"),url(https://cdn.changelog.com/static/fonts/SanaSansAlt-Regular-8afb566ae965155d670a79cd756a5a49.woff) format("woff")
+}
+@font-face{
+    font-display:fallback;
+    font-family:Sana Sans;
+    font-style:italic;
+    font-weight:400;
+    src:url(https://cdn.changelog.com/static/fonts/SanaSansAlt-Italic-35476900fb78d63e856c86650779b1f1.woff2) format("woff2"),url(https://cdn.changelog.com/static/fonts/SanaSansAlt-Italic-0805cfd6bc5d30e71c5bf6750fafbbf4.woff) format("woff")
+}
+@font-face{
+    font-display:fallback;
+    font-family:Sana Sans;
+    font-style:normal;
+    font-weight:500;
+    src:url(https://cdn.changelog.com/static/fonts/SanaSansAlt-Medium-921201b1ed126cbd8d357cbc4aabd700.woff2) format("woff2"),url(https://cdn.changelog.com/static/fonts/SanaSansAlt-Medium-aa0e8cbef61cd725dd1b28e54fc6e105.woff) format("woff")
+}
+@font-face{
+    font-display:fallback;
+    font-family:Sana Sans;
+    font-style:italic;
+    font-weight:500;
+    src:url(https://cdn.changelog.com/static/fonts/SanaSansAlt-MediumItalic-ef0ed120de91bfaa2cab649c336e429a.woff2) format("woff2"),url(https://cdn.changelog.com/static/fonts/SanaSansAlt-MediumItalic-458762a9893389d7854cf439d166e100.woff) format("woff")
+}
+@font-face{
+    font-display:fallback;
+    font-family:Sana Sans;
+    font-style:normal;
+    font-weight:700;
+    src:url(https://cdn.changelog.com/static/fonts/SanaSansAlt-Bold-f7d92ca80161733ab541d541fb52e56b.woff2) format("woff2"),url(https://cdn.changelog.com/static/fonts/SanaSansAlt-Bold-06feb5fb2dd4f3c1c1b7a97687384752.woff) format("woff")
+}
+@font-face{
+    font-display:fallback;
+    font-family:Sana Sans;
+    font-style:italic;
+    font-weight:700;
+    src:url(https://cdn.changelog.com/static/fonts/SanaSansAlt-BoldItalic-67f1f7caea673be679946a61509ee464.woff2) format("woff2"),url(https://cdn.changelog.com/static/fonts/SanaSansAlt-BoldItalic-6ef21ccd0e6016cdbeb128514e56bf21.woff) format("woff")
+}
+@font-face{
+    font-display:fallback;
+    font-family:Sana Sans;
+    font-style:normal;
+    font-weight:900;
+    src:url(https://cdn.changelog.com/static/fonts/SanaSansAlt-Black-49ca6d19438da4bba0f9bdf798a9d2fa.woff2) format("woff2"),url(https://cdn.changelog.com/static/fonts/SanaSansAlt-Black-89d0183121cc00a304c4a2f0cf2b6cbd.woff) format("woff")
+}
+@font-face{
+    font-display:fallback;
+    font-family:Sana Sans;
+    font-style:italic;
+    font-weight:900;
+    src:url(https://cdn.changelog.com/static/fonts/SanaSansAlt-BlackItalic-2eb35c9579f67a8951d37c88f7c2a027.woff2) format("woff2"),url(https://cdn.changelog.com/static/fonts/SanaSansAlt-BlackItalic-4e0dd89da9185383bb434be92904927e.woff) format("woff")
+}

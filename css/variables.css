@@ -1,0 +1,10 @@
+:root {
+  --color-black: #101820;
+  --color-white: #fff;
+  --color-green: #59B287;
+  --color-grey: #878b8f;
+  --font-display: 'Sana Sans', sans-serif;
+  --font-sans: 'Sana Sans', sans-serif;
+  --font-mono: 'Roboto Mono', monospace;
+  --base-border: 1px solid var(--color-black);
+}

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Changelog News</title>
+    <link rel="stylesheet" href="./css/main.css">
+
+    <script>
+      window.onload = function() {
+        const iframe = document.getElementById('newsletter_iframe');
+        iframe.style.height = iframe.contentWindow.document.body.scrollHeight + 'px';
+
+        window.onresize = function() {
+          iframe.style.height = iframe.contentWindow.document.body.scrollHeight + 'px';
+        };
+      };
+
+      function goToTestimonial(index) {
+        // Get all slides and pagination buttons
+        const slides = document.querySelectorAll('.testimonials-item');
+        const paginationButtons = document.querySelectorAll('.testimonials-pagination li button');
+
+        // Hide all slides and remove 'is-active' class from pagination buttons
+        slides.forEach(function(slide) {
+          slide.classList.remove('is-active');
+        });
+        paginationButtons.forEach(function(button) {
+          button.parentNode.classList.remove('is-active');
+        });
+
+        // Show the selected slide and add 'is-active' class to its corresponding pagination button
+        slides[index].classList.add('is-active');
+        paginationButtons[index].parentNode.classList.add('is-active');
+      }
+    </script>
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <div class="header-inner">
+          <div class="header-info">
+            <img src="./img/logo.svg" alt="Changelog News Logo" width="48px">
+            <h1 class="sans-xl">Changelog News, the software newsletter with a companion podcast.</h1>
+            <p class="sans-md color-grey"><em>Audio for folks too productive to read, text for those who forgot their headphones at home.</em></p>
+
+            <form class="subscribe_form">
+              <label for="email" class="visually-hidden">Email:</label>
+              <input type="email" id="email" name="email" placeholder="Your email address..." required>
+              <button type="submit">Subscribe</button>
+            </form>
+
+            <ul class="subscribe_icons">
+              <li class="subscribe_icons-item" style="--image-url: url(https://cdn.changelog.com/static/images/icons/podcast_icon-apple-d6c46c92770203caa0afcdf49a0b23c7.png)"><a href="">Apple</a></li>
+              <li class="subscribe_icons-item" style="--image-url: url(https://cdn.changelog.com/static/images/icons/podcast_icon-overcast-0579f131754e9d82091d531495602720.png)"><a href="">Overcast</a></li>
+              <li class="subscribe_icons-item" style="--image-url: url(https://cdn.changelog.com/static/images/icons/podcast_icon-spotify-03bdc7f8f7de35209c1ab61704084df3.png)"><a href="">Spotify</a></li>
+              <li class="subscribe_icons-item" style="--image-url: url(https://cdn.changelog.com/static/images/icons/podcast_icon-android-5eefea09a4a07f40ac706a6483823f43.png)"><a href="">Android</a></li>
+            </ul>
+          </div>
+
+          <div class="testimonials">
+            <blockquote class="testimonials-item is-active">
+              <div class="testimonials-item-image">
+                <img src="https://i.pravatar.cc/100?img=12" width="64px" height="64px" />
+              </div>
+              <div>
+                <p>Changelog News is the only news I look forward to every week... and some weeks, I play it twice. Quick, witty, informative & positive. Rock on, Jerod!</p>
+                <cite class="mono-sm">Mary H.</cite>
+              </div>
+            </blockquote>
+            <blockquote class="testimonials-item">
+              <div class="testimonials-item-image">
+                <img src="https://i.pravatar.cc/100?img=13" width="64px" height="64px" />
+              </div>
+              <div>
+                <p>I gotta say the Changelog Newsletter is the best programming journalism i've seen in years.</p>
+                <cite class="mono-sm">Justin Searls</cite>
+              </div>
+            </blockquote>
+            <blockquote class="testimonials-item">
+              <div class="testimonials-item-image">
+                <img src="https://i.pravatar.cc/100?img=14" width="64px" height="64px" />
+              </div>
+              <div>
+                <p>Changelog News is the best thing since sliced bread. I can't get enough of it.</p>
+                <cite class="mono-sm">John Doe</cite>
+              </div>
+            </blockquote>
+            <ul class="testimonials-pagination">
+              <li class="is-active"><button title="Go to 1" onclick="goToTestimonial(0)"></button></li>
+              <li><button title="Go to 2" onclick="goToTestimonial(1)"></button></li>
+              <li><button title="Go to 3" onclick="goToTestimonial(2)"></button></li>
+            </ul>
+          </div>
+
+          <div class="header-ctas">
+            <button class="text_button m-b-sm">34 More Reasons to Subscribe</button>
+            <p class="mono-sm color-grey">Browse all of our podcasts at <a href="/">changelog.com</a></p>
+          </div>
+        </div>
+      </header>
+      <main class="main issue_list">
+        <!-- Toggle is-playing when playing or not -->
+        <article class="issue_list-item issue_list-item--sticky is-playing">
+          <div>
+            <p class="mono-sm">March 18, 2024 — 3 Minutes</p>
+            <h2 class="display-lg">🪧 No Maintenance Intended</h2>
+          </div>
+          <button class="play_button" title="Play"></button>
+          <div class="progress_bar" style="--progress: 30%;"></div>
+        </article>
+
+        <div id="newsletter_iframe-container" class="newsletter_content">
+          <!-- We need the iframe not to scroll. Using a deprecated attribute but not sure how reliable it is. -->
+          <iframe id="newsletter_iframe" src="./email.html" scrolling="no"></iframe>
+        </div>
+
+        <div class="issue_list-pagination">
+          <article class="issue_list-item issue_list-item--view_all">
+            <div>
+              <h2 class="display-lg"><a href="/news/archive">View All Episodes</a></h2>
+            </div>
+          </article>
+          <article class="issue_list-item">
+            <div>
+              <p class="mono-sm">March 18, 2024 — 3 Minutes</p>
+              <h2 class="display-lg"><a href="/news/87">🪧 No Maintenance Intended</a></h2>
+            </div>
+          </article>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,18 @@
+{
+  "name": "changelog-news",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build",
+    "css": "lightningcss --minify --bundle --targets '>= 0.25%' css/main.css -o style.css",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "lightningcss": "^1.24.1",
+    "lightningcss-cli": "^1.24.1",
+    "parcel": "^2.12.0"
+  }
+}
