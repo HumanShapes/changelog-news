@@ -4,7 +4,7 @@
   "description": "",
   "scripts": {
     "start": "parcel index.html",
-    "build": "parcel build",
+    "build": "parcel build index.html",
     "css": "lightningcss --minify --bundle --targets '>= 0.25%' css/main.css -o style.css",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
