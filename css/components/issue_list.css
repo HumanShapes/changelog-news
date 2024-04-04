@@ -25,7 +25,7 @@
 
     /* Audio Elements */
     .play_button {
-        background: url('/img/icon-play.svg') center no-repeat;
+        background: url('../../img/icon-play.svg') center no-repeat;
         background-size: 16px 20px;
         border: var(--base-border);
         border-radius: 50%;
@@ -33,7 +33,7 @@
         width: 3em;
     }
     &.is-playing .play_button {
-        background-image: url('/img/icon-pause.svg');
+        background-image: url('../../img/icon-pause.svg');
     }
 
     .progress_bar {
