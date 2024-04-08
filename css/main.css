@@ -26,9 +26,14 @@ body {
         height: 100%;
     }
     .header {
-        background: var(--color-black);
+        background: var(--color-dark);
+        border-right: 1px solid #000;
         color: var(--color-white);
         position: relative;
+
+        @media (prefers-color-scheme: dark) {
+            background: var(--color-black);
+        }
 
         .header-inner {
             display: flex;
@@ -57,8 +62,13 @@ body {
         display: flex;
         flex-direction: column;
         background: var(--color-white);
-        color: var(--color-black);
+        color: var(--color-dark);
         overflow-y: scroll;
+
+        @media (prefers-color-scheme: dark) {
+            background: var(--color-dark);
+            color: var(--color-white);
+        }
 
         .newsletter_content {
             flex: 1 0 8990px;

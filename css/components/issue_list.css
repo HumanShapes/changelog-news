@@ -11,6 +11,12 @@
     padding: 2rem;
     position: relative;
 
+    @media (prefers-color-scheme: dark) {
+        background: var(--color-dark);
+        color: var(--color-white);
+        border-bottom-color: var(--color-black);
+    }
+
     & > div {
         display: flex;
         flex: 1;
@@ -31,9 +37,18 @@
         border-radius: 50%;
         height: 3em;
         width: 3em;
+
+        @media (prefers-color-scheme: dark) {
+            background: url('../../img/icon-play-white.svg') center no-repeat;
+            border-color: var(--color-white);
+        }
     }
     &.is-playing .play_button {
         background-image: url('../../img/icon-pause.svg');
+
+        @media (prefers-color-scheme: dark) {
+        background-image: url('../../img/icon-pause-white.svg');
+        }
     }
 
     .progress_bar {
@@ -66,12 +81,20 @@
 .issue_list-pagination {
     border-top: var(--base-border);
 
+    @media (prefers-color-scheme: dark) {
+        border-top-color: var(--color-white);
+    }
+
     @container (width > 640px) {
         display: grid;
         grid-template-columns: fit-content(100%) 1fr;
 
         .issue_list-item--view_all {
             border-right: var(--base-border);
+
+            @media (prefers-color-scheme: dark) {
+                border-right-color: var(--color-white);
+            }
         }
     }
 }
