@@ -38,6 +38,18 @@
       function toggleReasons() {
         const reasons = document.querySelector('.reasons');
         reasons.classList.toggle('is-visible');
+
+        const isVisible = reasons.classList.contains('is-visible')
+
+        // Ensure we are scrolled to the top
+        if (isVisible) {
+          reasons.scrollTo({
+            top: reasons.offsetTop,
+          });
+        }
+
+        // Don't allow the body to scroll when modal is open
+        document.body.classList.toggle('no-scroll', isVisible)
       }
     </script>
   </head>
@@ -64,7 +76,8 @@
             </ul>
 
             <div class="reasons">
-              <h2 class="display-xl m-b-lg">34 Reasons You Should Subscribe to Changelog News</h2>
+              <button class="reasons-close" title="Close" onclick="toggleReasons()"></button>
+              <h2 class="display-xl m-b-lg m-r-lg">34 Reasons You Should Subscribe to&nbsp;Changelog News</h2>
               <ol class="reasons-list">
                 <li>We don’t track you.</li>
                 <li>We’ve been doing this for over ten years, and we’re great at it.</li>

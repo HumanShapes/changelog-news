@@ -19,20 +19,31 @@ body {
     padding: 0;
 }
 
+body.no-scroll {
+    @media (max-width: 879px) {
+        overflow: hidden;
+    }
+}
+
 .container {
     @media (min-width: 880px) {
         display: grid;
         grid-template-columns: 1fr 1fr;
         height: 100%;
+        position: relative;
     }
     .header {
         background: var(--color-dark);
         border-right: 1px solid #000;
         color: var(--color-white);
-        position: relative;
 
         @media (prefers-color-scheme: dark) {
             background: var(--color-black);
+        }
+
+        /* Contain the reasons modal on desktop (only) */
+        @media (min-width: 880px) {
+            position: relative;
         }
 
         .header-inner {
@@ -43,8 +54,8 @@ body {
             padding: var(--spacing-fluid);
             min-height: 100%;
 
-            /* At large sizes, we let the header sorta float in the middle. */
-            max-width: 680px;
+            /* At large sizes, we let the header sort of float in the middle. */
+            max-width: 740px;
             margin: 0 auto;
         }
 
