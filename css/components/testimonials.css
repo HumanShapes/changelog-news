@@ -1,4 +1,5 @@
 .testimonials {
+    height: 8rem; /* We need a static height so that this doesn't shift around when paginating */
     position: relative;
 
     .testimonials-pagination {
@@ -65,6 +66,7 @@
 
         p {
             font-style: italic;
+            line-height: 1.5;
 
             &:before {
                 content: '“';

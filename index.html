@@ -19,11 +19,11 @@
 
       function goToTestimonial(index) {
         // Get all slides and pagination buttons
-        const slides = document.querySelectorAll('.testimonials-item');
+        const testimonials = document.querySelectorAll('.testimonials-item');
         const paginationButtons = document.querySelectorAll('.testimonials-pagination li button');
 
         // Hide all slides and remove 'is-active' class from pagination buttons
-        slides.forEach(function(slide) {
+        testimonials.forEach(function(slide) {
           slide.classList.remove('is-active');
         });
         paginationButtons.forEach(function(button) {
@@ -31,9 +31,28 @@
         });
 
         // Show the selected slide and add 'is-active' class to its corresponding pagination button
-        slides[index].classList.add('is-active');
+        testimonials[index].classList.add('is-active');
         paginationButtons[index].parentNode.classList.add('is-active');
       }
+
+      // Auto-play testimonials
+      const testimonialInterval = setInterval(() => {
+          // Make sure we aren't hovering over the parent
+          if (document.querySelector('.testimonials').matches(':hover')) {
+            return;
+          }
+
+          const testimonials = document.querySelectorAll('.testimonials-item');
+          const activeTestimonial = document.querySelector('.testimonials-item.is-active');
+          let nextIndex = Array.from(activeTestimonial.parentNode.children).indexOf(activeTestimonial) + 1;
+
+          // check if were at the last testimonial
+          if (nextIndex == testimonials.length) {
+            nextIndex = 0;
+          }
+          console.log(nextIndex);
+          goToTestimonial(nextIndex);
+      }, 10000);
 
       function toggleReasons() {
         const reasons = document.querySelector('.reasons');
@@ -59,7 +78,7 @@
         <div class="header-inner">
           <div class="header-info">
             <img src="./img/logo.svg" alt="Changelog News Logo" width="48px">
-            <h1 class="sans-xl">Changelog News, the software newsletter with a companion podcast.</h1>
+            <h1 class="sans-xl">Changelog News, the software&nbsp;newsletter with a companion podcast.</h1>
             <p class="sans-md color-grey"><em>Audio for folks too productive to read, text for those who forgot their headphones at home.</em></p>
 
             <form class="subscribe_form">
