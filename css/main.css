@@ -7,6 +7,7 @@
 @import './components/issue_list.css';
 @import './components/reasons.css';
 @import './components/subscribe_form.css';
+@import './components/subscribe_icons.css';
 @import './components/testimonials.css';
 
 /* Primary Layout */
@@ -49,7 +50,7 @@ body.no-scroll {
         .header-inner {
             display: flex;
             flex-direction: column;
-            gap: 4rem;
+            gap: 2rem;
             justify-content: space-between;
             padding: var(--spacing-fluid);
             min-height: 100%;
@@ -62,7 +63,7 @@ body.no-scroll {
         .header-info {
             display: flex;
             flex-direction: column;
-            gap: 2rem;
+            gap: clamp(1rem, 2vw, 2rem);
         }
 
         .header-ctas {
@@ -118,33 +119,5 @@ a {
 
 .text_button {
     font-family: var(--font-mono);
-}
-
-.subscribe_icons {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-
-    .subscribe_icons-item {
-        a {
-            background: var(--image-url) no-repeat left center;
-            background-size: 1.5rem;
-            display: block;
-            font-family: var(--font-mono);
-            font-size: 0.75em;
-            line-height: 1.325rem;
-            height: 1.5rem;
-            padding: 0 0 0 2.25rem;
-            border-bottom: 0;
-
-            span {
-                @media (max-width: 480px) {
-                    display: none;
-                }
-            }
-        }
-    }
+    font-size: clamp(0.875rem, 2.25vw, 1rem);
 }

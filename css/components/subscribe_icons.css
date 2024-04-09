@@ -1,0 +1,28 @@
+.subscribe_icons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: clamp(0.5rem, 1.5vw, 2rem);
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+
+    .subscribe_icons-item {
+        a {
+            background: var(--image-url) no-repeat left center;
+            background-size: 1.5rem;
+            display: block;
+            font-family: var(--font-mono);
+            font-size: 0.75em;
+            line-height: 1.325rem;
+            height: 1.5rem;
+            padding: 0 0 0 2.25rem;
+            border-bottom: 0;
+
+            span {
+                @media (max-width: 480px) {
+                    display: none;
+                }
+            }
+        }
+    }
+}

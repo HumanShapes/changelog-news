@@ -1,6 +1,12 @@
 .testimonials {
+    display: none;
     height: 8rem; /* We need a static height so that this doesn't shift around when paginating */
     position: relative;
+
+    @media (min-width: 880px) {
+        display: block;
+    }
+
 
     .testimonials-pagination {
         justify-content: center;

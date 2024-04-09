@@ -1,25 +1,25 @@
 /* Display */
 .display-sm {
     font-family: var(--font-display);
-    font-size: 1rem;
+    font-size: clamp(0.875rem, 2vw, 1rem);
     font-weight: 800;
     line-height: 1.5;
 }
 .display-md {
     font-family: var(--font-display);
-    font-size: 1.25rem;
+    font-size: clamp(1rem, 3vw, 1.25rem);
     font-weight: 800;
     line-height: 1.5;
 }
 .display-lg {
     font-family: var(--font-display);
-    font-size: 1.5rem;
+    font-size: clamp(1.25rem, 4vw, 1.5rem);
     font-weight: 800;
     line-height: 1.5;
 }
 .display-xl {
     font-family: var(--font-display);
-    font-size: 2rem;
+    font-size: clamp(1.5rem, 4.5vw, 2rem);
     font-weight: 800;
     line-height: 1.25;
 }
@@ -39,34 +39,34 @@
 /* Sans */
 .sans-sm {
     font-family: var(--font-sans);
-    font-size: 1rem;
+    font-size: clamp(0.875rem, 3vw, 1rem);
     line-height: 1.5;
 }
 .sans-md {
     font-family: var(--font-sans);
-    font-size: 1.25rem;
+    font-size: clamp(1rem, 3vw, 1.25rem);
     font-weight: 400;
     line-height: 1.5;
 }
 .sans-lg {
     font-family: var(--font-sans);
-    font-size: 1.5rem;
+    font-size: clamp(1.25rem, 3vw, 1.5rem);
     lin-height: 1.5;
 }
 
 /* Mono */
 .mono-sm {
     font-family: var(--font-mono);
-    font-size: 0.875rem;
+    font-size: clamp(0.75rem, 2vw, 0.875rem);
 }
 .mono-md {
     font-family: var(--font-mono);
-    font-size: 1rem;
+    font-size: clamp(0.875rem, 2.25vw, 1rem);
     font-weight: 400;
 }
 .mono-lg {
     font-family: var(--font-mono);
-    font-size: 1.25rem;
+    font-size: clamp(1rem, 2.5vw, 1.25rem);
 }
 
 
