@@ -35,7 +35,7 @@
         paginationButtons[index].parentNode.classList.add('is-active');
       }
 
-      // Auto-play testimonials
+      // Autoplay testimonials
       const testimonialInterval = setInterval(() => {
           // Make sure we aren't hovering over the parent
           if (document.querySelector('.testimonials').matches(':hover')) {
@@ -50,7 +50,6 @@
           if (nextIndex == testimonials.length) {
             nextIndex = 0;
           }
-          console.log(nextIndex);
           goToTestimonial(nextIndex);
       }, 10000);
 

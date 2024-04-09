@@ -13,11 +13,16 @@
 /* Primary Layout */
 html,
 body {
+    background: var(--color-white);
     font-family: var(--font-sans);
     font-size: 16px;
     height: 100%;
     margin: 0;
     padding: 0;
+
+    @media (prefers-color-scheme: dark) {
+        background: var(--color-dark);
+    }
 }
 
 body.no-scroll {
