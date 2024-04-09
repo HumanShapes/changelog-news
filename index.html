@@ -17,7 +17,7 @@
         };
       };
 
-      function goToTestimonial(index) {
+      global.goToTestimonial = function goToTestimonial(index) {
         // Get all slides and pagination buttons
         const testimonials = document.querySelectorAll('.testimonials-item');
         const paginationButtons = document.querySelectorAll('.testimonials-pagination li button');
@@ -53,7 +53,7 @@
           goToTestimonial(nextIndex);
       }, 10000);
 
-      function toggleReasons() {
+      global.toggleReasons = function toggleReasons() {
         const reasons = document.querySelector('.reasons');
         reasons.classList.toggle('is-visible');
 
