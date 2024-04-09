@@ -6,70 +6,6 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Changelog News</title>
     <link rel="stylesheet" href="./css/main.css">
-
-    <script>
-      window.onload = function() {
-        const iframe = document.getElementById('newsletter_iframe');
-        iframe.style.height = iframe.contentWindow.document.body.scrollHeight + 'px';
-
-        window.onresize = function() {
-          iframe.style.height = iframe.contentWindow.document.body.scrollHeight + 'px';
-        };
-      };
-
-      global.goToTestimonial = function goToTestimonial(index) {
-        // Get all slides and pagination buttons
-        const testimonials = document.querySelectorAll('.testimonials-item');
-        const paginationButtons = document.querySelectorAll('.testimonials-pagination li button');
-
-        // Hide all slides and remove 'is-active' class from pagination buttons
-        testimonials.forEach(function(slide) {
-          slide.classList.remove('is-active');
-        });
-        paginationButtons.forEach(function(button) {
-          button.parentNode.classList.remove('is-active');
-        });
-
-        // Show the selected slide and add 'is-active' class to its corresponding pagination button
-        testimonials[index].classList.add('is-active');
-        paginationButtons[index].parentNode.classList.add('is-active');
-      }
-
-      // Autoplay testimonials
-      const testimonialInterval = setInterval(() => {
-          // Make sure we aren't hovering over the parent
-          if (document.querySelector('.testimonials').matches(':hover')) {
-            return;
-          }
-
-          const testimonials = document.querySelectorAll('.testimonials-item');
-          const activeTestimonial = document.querySelector('.testimonials-item.is-active');
-          let nextIndex = Array.from(activeTestimonial.parentNode.children).indexOf(activeTestimonial) + 1;
-
-          // check if were at the last testimonial
-          if (nextIndex == testimonials.length) {
-            nextIndex = 0;
-          }
-          goToTestimonial(nextIndex);
-      }, 10000);
-
-      global.toggleReasons = function toggleReasons() {
-        const reasons = document.querySelector('.reasons');
-        reasons.classList.toggle('is-visible');
-
-        const isVisible = reasons.classList.contains('is-visible')
-
-        // Ensure we are scrolled to the top
-        if (isVisible) {
-          reasons.scrollTo({
-            top: reasons.offsetTop,
-          });
-        }
-
-        // Don't allow the body to scroll when modal is open
-        document.body.classList.toggle('no-scroll', isVisible)
-      }
-    </script>
   </head>
   <body>
     <div class="container">
@@ -207,5 +143,77 @@
         </div>
       </main>
     </div>
+
+
+    <script>
+      window.onload = function() {
+        const iframe = document.getElementById('newsletter_iframe');
+        iframe.style.height = iframe.contentWindow.document.body.scrollHeight + 'px';
+
+        window.onresize = function() {
+          iframe.style.height = iframe.contentWindow.document.body.scrollHeight + 'px';
+        };
+      };
+
+      function goToTestimonial(index) {
+        // Get all slides and pagination buttons
+        const testimonials = document.querySelectorAll('.testimonials-item');
+        const paginationButtons = document.querySelectorAll('.testimonials-pagination li button');
+
+        // Hide all slides and remove 'is-active' class from pagination buttons
+        testimonials.forEach(function(slide) {
+          slide.classList.remove('is-active');
+        });
+        paginationButtons.forEach(function(button) {
+          button.parentNode.classList.remove('is-active');
+        });
+
+        // Show the selected slide and add 'is-active' class to its corresponding pagination button
+        testimonials[index].classList.add('is-active');
+        paginationButtons[index].parentNode.classList.add('is-active');
+      }
+
+      // Autoplay testimonials
+      const testimonialInterval = setInterval(() => {
+          // Make sure we aren't hovering over the parent
+          if (document.querySelector('.testimonials').matches(':hover')) {
+            return;
+          }
+
+          const testimonials = document.querySelectorAll('.testimonials-item');
+          const activeTestimonial = document.querySelector('.testimonials-item.is-active');
+          let nextIndex = Array.from(activeTestimonial.parentNode.children).indexOf(activeTestimonial) + 1;
+
+          // check if were at the last testimonial
+          if (nextIndex == testimonials.length) {
+            nextIndex = 0;
+          }
+          goToTestimonial(nextIndex);
+      }, 10000);
+
+      function toggleReasons() {
+        const reasons = document.querySelector('.reasons');
+        reasons.classList.toggle('is-visible');
+
+        const isVisible = reasons.classList.contains('is-visible')
+
+        // Ensure we are scrolled to the top
+        if (isVisible) {
+          reasons.scrollTo({
+            top: reasons.offsetTop,
+          });
+        }
+
+        // Don't allow the body to scroll when modal is open
+        document.body.classList.toggle('no-scroll', isVisible)
+      }
+
+      // This is totally just nothing but Parcel tries to treeshake these functions if they aren't used.
+      // Delete this.
+      document.querySelector('.reasons').addEventListener('fart', (event) => {
+        toggleReasons();
+        goToTestimonial(0);
+      });
+    </script>
   </body>
 </html>
