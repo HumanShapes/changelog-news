@@ -1,3 +1,11 @@
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-weight: normal;
+}
+
 /* Display */
 .display-sm {
     font-family: var(--font-display);
@@ -26,14 +34,14 @@
 .display-2xl {
     font-family: var(--font-display);
     font-size: 2.5rem;
-    font-weight: 800;
+    font-weight: 700;
     line-height: 1.25;
 }
 .display-3xl {
     font-family: var(--font-display);
-    font-size: 3rem;
-    font-weight: 800;
-    line-height: 1.25;
+    font-size: 3.25rem;
+    font-weight: 700;
+    line-height: 1.125;
 }
 
 /* Sans */
@@ -53,6 +61,12 @@
     font-size: clamp(1.25rem, 3vw, 1.5rem);
     lin-height: 1.5;
 }
+.sans-xl {
+    font-family: var(--font-sans);
+    font-size: clamp(2rem, 5vw, 2.25rem);
+    font-weight: 500;
+    lin-height: 1.5;
+}
 
 /* Mono */
 .mono-sm {
@@ -69,12 +83,16 @@
     font-size: clamp(1rem, 2.5vw, 1.25rem);
 }
 
-
 /* Misc. */
+
 .italic {
     font-style: italic;
 }
 
 .color-grey {
     color: var(--color-grey);
+}
+
+.uppercase {
+    text-transform: uppercase;
 }
